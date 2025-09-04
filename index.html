@@ -1,72 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Shibuya Iori</title>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="style.css"> <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
 
-    <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-    <title>Hello World!</title>
+    <header>
+        <h1>Shibuya Iori</h1>
+        <p>東京科学大学 情報理工学院 数理・計算科学系</p>
+        <p id="last-updated">最終更新日: 2025-06-29</p> <nav>
+            <a href="#home">Home</a>
+            <a href="#interest">Interest</a>
+            <a href="#paper">Paper/Note</a>
+            <a href="#others">Others</a>
+        </nav>
+    </header>
 
-    <!-- The website stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            
+            <h3>What's New</h3>
+            <ul>
+                <li>2025-7-09: 2025年度前期B2Dフォーラムに参加しました <a href="#">[スライド]</a> (最終更新日: 2025-MM-DD)</li>
+                <li>2024-8-??: B2Dスキーム特別選抜に合格しました</li>
+            </ul>
 
-    <!-- The website JavaScript file -->
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-    <!--
-      The body includes the content you see in the page
-      Each element is defined using tags, like this <div></div>
-      The attributes like class="wrapper" let us style elements in the CSS
-    -->
-    <div class="wrapper">
-      <div class="content" role="main">
-        <h1 class="title">Hello World!</h1>
-        <img
-          src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-        <div class="instructions">
-          <h2>Using this project</h2>
-          <p>
-            This is the Glitch <strong>Hello Website</strong> project. You can
-            use it to build your own site. Check out the code in the editor and open
-            the <span class="fileopener" data-file="TODO.md" data-line="0"
-              >TODO</span> for next steps!
-          </p>
-          <!--  🚧 TODO: ADD BUTTON HERE -->
+            <h3>I am</h3>
+            <p>
+                渋谷伊織 (Shibuya Iori)
+            </p>
+            <p>
+                東京科学大学の学部3年次で、B2D特別課程に所属しながら数理論理学の研究を行っています。
+            </p>
 
-          <!-- Once you've added the button from TODO.md, click it in the page -->
-          <!-- Check out the function in script.js to see how it works -->
-        </div>
-      </div>
-    </div>
-    <!-- The footer holds our remix button — you can keep or delete it ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-      <a
-        class="btn--remix"
-        target="_top"
-        href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-      >
-        <img
-          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-          alt=""
-        />
-        Remix on Glitch
-      </a>
+            <h4>所属</h4>
+            <p>
+                東京科学大学 情報理工学院 数理・計算科学系 学士課程3年<br>
+                (鹿島研究室)
+            </p>
+
+            <h3>連絡先</h3>
+            <ul>
+                <li><strong>E-mail</strong>: shibuya.i.9f75[at]m.isct.ac.jp</li>
+                <li><strong>X (Twitter)</strong>: <a href="https://twitter.com/jikokennobun" target="_blank">@jikokennobun</a></li>
+            </ul>
+        </section>
+
+        <section id="interest">
+            <h2>Interest</h2>
+            <p>主に以下のことに興味があります。</p>
+            <ul>
+                <li>第2不完全性定理、証明可能性論理</li>
+                <li>様相論理、直観主義論理・中間論理</li>
+                <li>証明可能性代数</li>
+                <li>準古典算術、様相算術</li>
+                <li>哲学的論理学、数学基礎論（数理哲学）
+                    <ul><li>不可能世界論</li></ul>
+                </li>
+            </ul>
+
+            <h3>研究分野の解説</h3>
+            <h4>証明可能性論理 (Provability Logic)</h4>
+            <p>
+                証明可能性論理とは、「ペアノ算術PAで証明可能である」という性質そのものを研究する様相論理です。様相演算子 $\Box A$ を「AはPAで証明可能である」と解釈します。この解釈のもとで、Gödelの第二不完全性定理は $\Box(\Box \bot \to \bot) \to \Box \bot$ という形で表現されます。
+            </p>
+            <p>
+                Solovayによって証明された以下の算術的完全性定理は、この分野の最も重要な結果の一つです。
+            </p>
+            <p>
+                <b>算術的完全性定理 (Arithmetical Completeness Theorem)</b>:
+                $$ \mathrm{GL} \vdash A \iff \text{全ての算術的解釈 } * \text{ について } \mathrm{PA} \vdash A^* $$
+                これは、証明可能性に関する命題のトートロジー全体が、様相論理GLによって正確に特徴づけられることを示しています。
+            </p>
+        </section>
+        
+        <section id="paper">
+            <h2>Paper / Note</h2>
+            
+            <h3>論文紹介</h3>
+            <ul>
+                <li>L. D. Beklemishev, "Provability algebras and proof-theoretic ordinals, I."</li>
+                <li>A. Visser, "An overview of provability logic."</li>
+            </ul>
+            
+            <h3>ノート類</h3>
+            <ul>
+                <li><a href="#">第二不完全性定理動物園</a></li>
+                <li><a href="#">証明可能性論理一覧</a></li>
+            </ul>
+        </section>
+
+        <section id="others">
+            <h2>Others</h2>
+
+            <h3>趣味</h3>
+            <p>
+                DTM (音楽制作) をしています。あいあーるPという名前で活動しています。
+            </p>
+            <ul>
+                <li><a href="#" target="_blank">SoundCloud</a></li>
+            </ul>
+            
+            <h3>その他の活動</h3>
+            <ul>
+                <li><a href="#" target="_blank">Note</a></li>
+                <li><a href="#" target="_blank">Scrapbox</a></li>
+            </ul>
+
+            <h3>文献紹介</h3>
+            <ul>
+                <li>戸次大介『数学における真理と様相』</li>
+                <li>G. Boolos, J. P. Burgess, R. C. Jeffrey『Computability and Logic (GBE)』</li>
+                <li>田中一之『数学基礎論序説』</li>
+                <li>鹿島譲『数理論理学』</li>
+            </ul>
+            
+            <h3>Links</h3>
+            <ul>
+                <li><a href="#" target="_blank">倉橋 太志 先生</a></li>
+                <li><a href="#" target="_blank">sno2wmanさん</a></li>
+                <li><a href="https://nishimura-yuki-website.glitch.me/" target="_blank">西村 祐輝さん</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Iori Shibuya</p>
     </footer>
-  </body>
+
+</body>
 </html>
